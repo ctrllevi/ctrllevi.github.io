@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ctrl_levi's CTFs
+title: ctrl_levi
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   writeups, ctf analysis, and much more!
@@ -29,6 +29,9 @@ github_username:  ctrllevi
 
 # Build settings
 theme: minima
+minima:
+  skin: dark
+  date_format: "%b %-d, %Y"
 plugins:
   - jekyll-feed
 
