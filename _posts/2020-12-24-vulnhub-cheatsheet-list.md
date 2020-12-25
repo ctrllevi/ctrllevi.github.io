@@ -3,6 +3,7 @@ layout: post
 title:  "Vulnhub CTF List Cheatsheet"
 date:   2020-12-23 12:06:56 +0400
 categories: vulnhub
+description: "This cheatsheet is aimed at the CTF Players and Beginners to help them sort Vulnhub Labs. I believe this is a great opportunity to start my career in penetration testing, as well as to get more experienced in boot2root CTFs."
 ---
 
 This cheatsheet is aimed at the CTF Players and Beginners to help them sort Vulnhub Labs. I believe this is a great opportunity to start my career in penetration testing, as well as to get more experienced in boot2root CTFs. 
