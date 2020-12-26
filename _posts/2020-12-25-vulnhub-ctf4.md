@@ -6,7 +6,7 @@ categories: vulnhub lampsecurity
 description: "This is the fourth CTF exercise of the LAMPSecurity project. "
 ---
 
-Box Stats: <span style="text-decoration: underline">underlined text</span>
+<span style="text-decoration: underline">Box Stats</span>
 
 | Name: | LAMPSecurity: CTF4 |
 |-------|--------|
