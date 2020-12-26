@@ -3,7 +3,7 @@ layout: post
 title:  "LAMPSecurity: CTF4"
 date:   2020-12-25  +0400
 categories: vulnhub lampsecurity
-description: "This is the fourth CTF exercise of the LAMPSecurity project. "
+description: "This is the fourth CTF exercise of the LAMPSecurity project. It mainly focues on sql injection, and the cracking of hashes. We were easily escalate our priviliges and root the machine. It was fun, and took around 40 minutes to pwn. This is my first writeup, give me feedback on my twitter if there is anything I need to improve!"
 ---
 
 <span style="text-decoration: underline">Box Stats</span>
