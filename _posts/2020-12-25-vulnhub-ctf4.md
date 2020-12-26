@@ -19,7 +19,7 @@ description: "This is the fourth CTF exercise of the LAMPSecurity project. It ma
 - Nmap
 - SQLmap
 - Hash Cracking
-- 
+- Privilige Escalation
 
 ### Gathering Information (Recon)
 
