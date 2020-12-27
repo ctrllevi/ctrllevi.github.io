@@ -15,19 +15,19 @@ description: "This is the fourth CTF exercise of the LAMPSecurity project. It ma
 | OS: | Linux - Fedora Core release 5 (Bordeaux) |
 | Creator: | https://www.vulnhub.com/author/madirish2600,75/ |
 
-### Topics:
+## Topics:
 - Nmap
 - SQLmap
 - Hash Cracking
 - Privilige Escalation
 
-### Gathering Information (Recon)
+# Gathering Information (Recon)
 
 Let's start gathering information about our target, which we can carry out by starting various scans that give us valuable knowledge about the box's structure. I like to use the command `export IP=___.___._.___` to assign the IP address to the varible `IP`. 
 
 We can start by performing our nmap scan (I like to do staged scans by first performing `nmap -T4 -p-` and then adding the `-A` flag and specify the open ports `-p__,__,___` to make nmap give more information about each service).
 
-# Discovering Open Ports:
+### Discovering Open Ports:
 ```
 $ nmap -T4 -p- $IP
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-26 09:32 UTC
@@ -40,7 +40,7 @@ PORT    STATE  SERVICE
 80/tcp  open   http
 631/tcp closed ipp
 ```
-# OS Detection, Version Detection, Script Scanning, and Traceroute with the `-A` flag:
+### OS Detection, Version Detection, Script Scanning, and Traceroute with the `-A` flag:
 ```
 $ nmap -T4 -p22,25,80 -A $IP
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-26 09:42 UTC
@@ -63,17 +63,17 @@ PORT   STATE SERVICE VERSION
 Service Info: Host: ctf4.sas.upenn.edu; OS: Unix
 ```
 
-### Enumeration
+# Enumeration
 I like to start enumerating ports one by one, following the order of the nmap scan results. In our case the following ports are open:
 ```
 22 - SSH - OpenSSH 4.3
 25 - SMTP - Sendmail 8.13.5
 80 - HTTP - Apache 2.2.0
 ```
-# Port 22 - SSH
+### Port 22 - SSH
 SSH is never really a protocol that we can exploit, rather it can be used to connect to the victim once credentials were gathered. We rarely, or never are able to find exploits for SSH other than DoS (which we don't really want as pentesters), except for the occational bruteforcing if needed. When looking at this protocol from a CTF perspective, we can guess that once we get user credentions (from LFI, SQLi, RCE, etc) we can use this protocol for a clean terminal-based connection. In some cases, it is better to use SSH than a bare-bone reverse shell.
 
-# Port 25 - SMTP
+### Port 25 - SMTP
 An SMTP (Simple Mail Transfer Protocol) server is an application that's primary purpose is to send, receive, and/or relay outgoing mail between email senders and receivers. Because the SMTP standard sends email without using encryption or authentication, every message you send is exposed to view through network sniffers (like Wireshark). The nmap scan also returned some commands that we can execute on this protocol. We can connect to it using the `nc $IP 25` command, and we will be greeted with a banner:
 
 ```
@@ -89,18 +89,12 @@ VRFY john
 VRFY root
 250 2.1.5 <root@ctf4.sas.upenn.edu>
 ```
-# Port 80 - HTTP
+### Port 80 - HTTP
 We can browse to the victim's website by simply typing the IP address into the search bar. It takes us to a website titled `Professor Ehks Center for Data Studies`. We can click onto various links that take us to different pages.
 
 (When coming back to this CTF, I realised there was another issue we could exploit, which was an LFI. We were able to print out files in the url `http://________/index.html?page=../../../../../../etc/passwd%00`. This also gave us the users that were on the machine)
 
-When browsing to the `Blog` page, we can see there are four entries. Each link takes us to a blog page. The interesting thing in this is the `id=_` query in the URL, it changes when we browse to different blogs. 
-
-(Image of changing ids)
-
-From this, we know there has to be a back-end database that sorts these queries. We can confirm that this is a SQL database, by adding a `id='` to the URL. This will give us an error message:
-
-(Image of error)
+When browsing to the `Blog` page, we can see there are four entries. Each link takes us to a blog page. The interesting thing in this is the `id=_` query in the URL, it changes when we browse to different blogs.  From this, we know there has to be a back-end database that sorts these queries. We can confirm that this is a SQL database, by adding a `id='` to the URL. This will give us an error message:
 
 We can enumerate SQL services using `SQLmap`. We can bring up the help page using `sqlmap -h`:
 
@@ -286,7 +280,7 @@ We can specify the database we want to enumerate using the `-D ____` flag, and s
 +---------+-----------+----------------------------------+
 ```
 
-### Exploitation
+# Exploitation
 
 
 Altough when we think of exploitation, we imagine gaining access to a machine through buffer overflows, remote code execution, cracking credentials and logging in with them is also exploitation. We can crack these hashes using HashCat, JohnTheRipper, or what I like to do is pass them into https://crackstation.net/. Crackstation is very quick, and doesn't use your computer's resources. It will give us plaintext passwords:
