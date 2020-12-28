@@ -15,25 +15,11 @@ description: "This is the fifth CTF exercise of the LAMPSecurity project. It mai
 | OS: | Linux - Fedora release 8 (Werewolf) |
 | Creator: | https://www.vulnhub.com/author/madirish2600,75/ |
 
-## Contents ##
-- [Recon](#Recon "Go to Recon")
-  - 
-  - 
-  - 
-- [Enumeration](#Enumeration "Go to Enumeration")
-  - 
-  - 
-  -
-- [Exploitation](#Explotation "Go to Exploitation")
-  - 
-  - 
-  -
-
 ## Topics: ##
-- 
-- 
-- 
-- 
+- Hash Cracking
+- Enumeration
+- Linux
+- Privilige Escalation
 
 # Recon #
 We always start by finding the IP address of the machine. This can be done using netdiscover or nmap. Once we have found it, we can assign it to the variable `IP` using the command `export ___.___._.___=IP`.
