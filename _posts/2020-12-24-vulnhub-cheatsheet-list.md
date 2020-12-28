@@ -11,7 +11,7 @@ This cheatsheet is aimed at the CTF Players and Beginners to help them sort Vuln
 I will be coming back and ticking off these machines once I solved them, and writeups will be coming soon for each machine. I plan to do about 15 writeups every month, giving me the opportunity to learn more. Thank you for checking out this short post, and I hope you will learn with me from these challenges.
 
 1.	[LAMPSecurity: CTF 4 - Completed](https://ctrllevi.github.io/vulnhub/lampsecurity/2020/12/25/vulnhub-ctf4.html)
-2.	[LAMPSecurity: CTF 5](add link here when completed)
+2.	[LAMPSecurity: CTF 5 - Completed](https://ctrllevi.github.io/vulnhub/lampsecurity/2020/12/27/vulnhub-ctf5.html)
 3.	[LAMPSecurity: CTF 7](add link here when completed)
 4.	[Holynix: v1](https://www.hackingarticles.in/hack-the-holynix-v1-boot-2-root-challenge/)
 5.	[pWnOS -1.0](https://www.hackingarticles.in/hack-the-pwnos-1-0-boot-to-root/)
