@@ -3,7 +3,7 @@ layout: post
 title:  "LAMPSecurity: CTF5"
 date:   2020-12-27  +0400
 categories: vulnhub lampsecurity
-description: "This is the fourth CTF exercise of the LAMPSecurity project. "
+description: "This is the fifth CTF exercise of the LAMPSecurity project. It mainly focuses on Priv Esc and finding and exploiting vulnerabilities in a webapp. It was fun and pwning the machine took around 1 hour. Hope you enjoy this writeup!"
 ---
 
 <span style="text-decoration: underline">Box Stats:</span>
