@@ -241,14 +241,14 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 ### LFI to get /etc/passwd ###
 The website on port 80 is titled `Phake Organization`. Our nikto scan also reveals that LFI is possible on the `index.php`. We can confirm this by going to the url `http://192.168.167.96/index.php?page=../../../../../etc/passwd%00` (you have to add the `%00` at the end or it will just show an error):
-![LFI to get /etc/passwd](https://raw.githubusercontent.com/ctrllevi/ctrllevi.github.io/main/_posts/images/lfi.png)
+![LFI to get /etc/passwd](https://raw.githubusercontent.com/ctrllevi/ctrllevi.github.io/main/_posts/images/CTF5/lfi.png)
 
 ### NanoCMS Hash Disclosure ###
 When we navigate to the `Blog` page, we can see at the bottom that this webapp is using NanoCMS. This is interesting because there is a known hash disclosure with this content manager (https://www.securityfocus.com/bid/34508/exploit). We can trigger this vulnerability by simply browsing to `/data/pagesdata.txt`:
-![Hash Disclosure to get adming password](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/hashdisclosure.png?raw=true)
+![Hash Disclosure to get adming password](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/hashdisclosure.png?raw=true)
 
 We can crack these hashes at [Crackstation.net](https://crackstation.net/). The hash cracker verifies this as an MD5 hash and gives us the plaintext password of `shannon`, (crackstation is especially fast as it doesn't use your computer's resources):
-![Cracking the hash](https://raw.githubusercontent.com/ctrllevi/ctrllevi.github.io/main/_posts/images/crackstation.png)
+![Cracking the hash](https://raw.githubusercontent.com/ctrllevi/ctrllevi.github.io/main/_posts/images/CTF5/crackstation.png)
 
 ### Uploading PHP Shell ###
 Using these credentials, we can login to the CMS's panel and modify the webpage. We can do this under the `New Page` section once we logged in at `http://192.168.167.96/~andy/data/nanoadmin.php`. You can copy paste the contents of your favourite php reverse shell (I prefer the pentestmonkey one) and add the page. This will be uploaded to `http://______/~andy/data/pages/shell.php`. Make sure you setup your netcat listener before browsing to the webpage. Once you visited the shell, you will get access to the machine as a low-priviliged user: `apache`, and we can do our general 'shell upgrading' thing:
