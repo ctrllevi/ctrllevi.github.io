@@ -163,6 +163,7 @@ select * from users where username=''' AND password=md5('') and is_admin=1
 ## Exploitation ##
 
 To bypass the login we found, we can use `' or 1=1 -- .` as this will be put into the query like so: `select * from users where username='' or 1=1 -- .' AND password=md5('') and is_admin=1`. This comments out the password section and makes us login with admin. We can head to `Manage Offerings > Reading Room > Add New` which allows us to post a a new reading and we could even add files:
+
 ![We can upload files!](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/uploadshell.png?raw=true)
 
 We can use this feature to upload a php reverse shell, that executes on the machine's side, and connects back to us. We could use the metasploit payload, but I like to use the built-in version of it which can be accessed in kali at the `/usr/share/webshells/php/php-reverse-shell.php` directory. Our dirsearch scan also revealed the `/assets/` directory. This is where files are uploaded on the webserver. We can click on the uploaded reverse shell, and get a connection:
