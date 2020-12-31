@@ -126,14 +126,14 @@ Here are the scans that I have conducted, I used to use gobuster, but I discover
 
 We can visit the webpage by simply typing the IP address into the browser's searchbar. We are brought to a page that is titled `Mad Irish Hacking Academy`, and the first thing that caught my attention is the login bar. I instantly registered with the credentials `test@test.com : test`.
 
-![Home page](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/homepage.png?raw=true)
+![Home page](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/homepage.png?raw=true)
 
 
-![Registering](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/registerandlogin.png?raw=true)
+![Registering](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/registerandlogin.png?raw=true)
 
 We can navigate to our proifile by clicking our name at the top-right of the page. We can see the query `id` in the URL `http://192.168.12.141/profile&id=115`! Hmmm, this is just like CTF4, I guessed. By adding a `'` at the end of the URL we trigger an SQL error:
 
-![SQL error](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/sqlerror.png?raw=true)
+![SQL error](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/sqlerror.png?raw=true)
 
 Let's see if we can use `sqlmap` to get credentials from the backend databases. We can use the command `sqlmap -u "http://____________/profile&id=115" -p id  --tables --cookie=____` to list the tables. I tried this and it didn't work :( I guess this was either intended as a rabbit hole, or it was not intended to be exploited at all.
 
@@ -152,7 +152,7 @@ This website had no gui, as soon as you visited the url, a window popped up aski
 # Port 8080 - Login Page #
 This webpage had a login page, nothing else. The first thing I test, is entering `'` into any of the fields. If this gives a login error, potentially it could disclose some information about the backend database. And as I expected, it gave me an error:
 
-![Login Error](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/loginerror.png?raw=true)
+![Login Error](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/loginerror.png?raw=true)
 
 Wow, this is really good. We are given the whole query and we can use it to craft our bypass. The error gave me the whole query of:
 ```
@@ -163,7 +163,7 @@ select * from users where username=''' AND password=md5('') and is_admin=1
 ## Exploitation ##
 
 To bypass the login we found, we can use `' or 1=1 -- .` as this will be put into the query like so: `select * from users where username='' or 1=1 -- .' AND password=md5('') and is_admin=1`. This comments out the password section and makes us login with admin. We can head to `Manage Offerings > Reading Room > Add New` which allows us to post a a new reading and we could even add files:
-![We can upload files!](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/uploadshell.png?raw=true)
+![We can upload files!](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/uploadshell.png?raw=true)
 
 We can use this feature to upload a php reverse shell, that executes on the machine's side, and connects back to us. We could use the metasploit payload, but I like to use the built-in version of it which can be accessed in kali at the `/usr/share/webshells/php/php-reverse-shell.php` directory. Our dirsearch scan also revealed the `/assets/` directory. This is where files are uploaded on the webserver. We can click on the uploaded reverse shell, and get a connection:
 ```
@@ -191,7 +191,7 @@ We can use Darkstar's guide to upgrading our shell:
 
 From here, I found a local privilige escalation exploit, however I was unable to get it working, if you used this exploit and it worked, than it's something on my side. Anyways, that wasn't the only way in. We knew there were users on the website from the website at port `8080`, by clicking on the `Users` tab:
 
-![Users](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF5/users.png?raw=true)
+![Users](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/users.png?raw=true)
 
 We also knew that this information comes from the back-end database was MySQL. Using this information, we can guess that we are able to get the users' hashes using the mysql command-line interface. We can interact with it using the command `mysql -u root` without needing to supply a password on this machine. I used this vulnerability to get the hashes for every user on the machine:
 
