@@ -2,7 +2,7 @@
 layout: post
 title:  "LAMPSecurity: CTF7"
 date:   2020-12-31  +0400
-categories: 
+categories: vulnhub lampsecurity
 description: "This is the seventh CTF exercise of the LAMPSecurity project. It mainly focuses on enumerating webapps, and bypassing logins with SQL injection. Took some researching to find the right commands when finding the hashes in the SQL database, but it was a fun and interesting machine to pwn. Enjoy the writeup!"
 ---
 
