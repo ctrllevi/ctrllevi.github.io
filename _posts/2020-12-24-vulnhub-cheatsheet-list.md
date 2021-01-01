@@ -12,7 +12,7 @@ I will be coming back and ticking off these machines once I solved them, and wri
 
 1.	[LAMPSecurity: CTF 4 - Completed](https://ctrllevi.github.io/vulnhub/lampsecurity/2020/12/25/vulnhub-ctf4.html)
 2.	[LAMPSecurity: CTF 5 - Completed](https://ctrllevi.github.io/vulnhub/lampsecurity/2020/12/27/vulnhub-ctf5.html)
-3.	[LAMPSecurity: CTF 7](add link here when completed)
+3.	[LAMPSecurity: CTF 7 - Completed](https://ctrllevi.github.io/2020/12/31/vulnhub-ctf7.html)
 4.	[Holynix: v1](https://www.hackingarticles.in/hack-the-holynix-v1-boot-2-root-challenge/)
 5.	[pWnOS -1.0](https://www.hackingarticles.in/hack-the-pwnos-1-0-boot-to-root/)
 6.	[pWnOS -2.0](https://www.hackingarticles.in/hack-the-pwnos-2-0-boot-2-root-challenge/)
