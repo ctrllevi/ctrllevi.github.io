@@ -129,7 +129,7 @@ We can visit the webpage by simply typing the IP address into the browser's sear
 ![Home page](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/homepage.png?raw=true)
 
 
-![Register](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/registerandlogin.png?raw=true)
+![Register](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/CTF7/reigsterandlogin.png?raw=true)
 
 We can navigate to our proifile by clicking our name at the top-right of the page. We can see the query `id` in the URL `http://192.168.12.141/profile&id=115`! Hmmm, this is just like CTF4, I guessed. By adding a `'` at the end of the URL we trigger an SQL error:
 
