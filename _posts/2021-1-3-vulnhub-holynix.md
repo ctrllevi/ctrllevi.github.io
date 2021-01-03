@@ -16,10 +16,10 @@ description: "Holynix is a Linux distribution that was deliberately built to hav
 | Creator: | https://www.vulnhub.com/author/holynix,4/ |
 
 ## Topics: ##
-- 
-- 
-- 
-- 
+- SQL Injection
+- Enumeration
+- Web App
+- Privilige Escalation
 
 ## Recon #
 Like always, start scanning the machine as you wish, I either use my own automated tool or just the commands that I am familiar with. Either way, we should end up with the same results:
