@@ -11,9 +11,9 @@ description: "This is the seventh CTF exercise of the LAMPSecurity project. It m
 | Name: | LAMPSecurity: CTF7 |
 |-------|--------|
 | Series: | [LAMPSecurity](https://www.vulnhub.com/series/lampsecurity,43/) |
-| Link: | https://www.vulnhub.com/entry/lampsecurity-ctf7,86/ |
+| Link: | [LAMPSecurity: CTF7](https://www.vulnhub.com/entry/lampsecurity-ctf7,86/) |
 | OS: | Linux - CentOS release 6.3 |
-| Creator: | https://www.vulnhub.com/author/madirish2600,75/ |
+| Creator: | [madirish2600](https://www.vulnhub.com/author/madirish2600,75/) |
 
 ## Topics: ##
 - SQL Injection
