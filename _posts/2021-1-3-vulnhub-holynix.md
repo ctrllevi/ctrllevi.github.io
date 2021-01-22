@@ -11,9 +11,9 @@ description: "Holynix is a Linux distribution that was deliberately built to hav
 | Name: | Holynix: v1 |
 |-------|--------|
 | Series: | [Holynix](https://www.vulnhub.com/series/holynix,6/) |
-| Link: | https://www.vulnhub.com/entry/holynix-v1,20/ |
+| Link: | [Holynix: v1](https://www.vulnhub.com/entry/holynix-v1,20/) |
 | OS: | Linux - Ubuntu 8.04.4 LTS |
-| Creator: | https://www.vulnhub.com/author/holynix,4/ |
+| Creator: | [holynix](https://www.vulnhub.com/author/holynix,4/) |
 
 ## Topics: ##
 - SQL Injection
