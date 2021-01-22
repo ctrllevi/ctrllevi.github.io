@@ -11,9 +11,9 @@ description: "This is the fourth CTF exercise of the LAMPSecurity project. It ma
 | Name: | LAMPSecurity: CTF4 |
 |-------|--------|
 | Series: | [LAMPSecurity](https://www.vulnhub.com/series/lampsecurity,43/) |
-| Link: | https://www.vulnhub.com/entry/lampsecurity-ctf4,83/ |
+| Link: | [LAMPSecurity: CTF4](https://www.vulnhub.com/entry/lampsecurity-ctf4,83/) |
 | OS: | Linux - Fedora Core release 5 (Bordeaux) |
-| Creator: | https://www.vulnhub.com/author/madirish2600,75/ |
+| Creator: | [madirish2600](https://www.vulnhub.com/author/madirish2600,75/) |
 
 ## Topics:
 - Nmap
