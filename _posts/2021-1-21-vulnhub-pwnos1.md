@@ -11,9 +11,9 @@ description: "This is the first machine of the pWnOS series. This machine is ran
 | Name: | pWnOS: 1.0 |
 |-------|--------|
 | Series: | [pWnOS](https://www.vulnhub.com/series/pwnos,3/) |
-| Link: | (https://www.vulnhub.com/entry/pwnos-10,33/) |
+| Link: | [pWnOS: 1.0](https://www.vulnhub.com/entry/pwnos-10,33/) |
 | OS: | Ubuntu 2.6.32 |
-| Creator: | (https://www.vulnhub.com/author/pwnos,6/) |
+| Creator: | [pwnos](https://www.vulnhub.com/author/pwnos,6/) |
 
 
 ## Topics: ##
