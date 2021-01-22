@@ -11,9 +11,9 @@ description: "This is the fifth CTF exercise of the LAMPSecurity project. It mai
 | Name: | LAMPSecurity: CTF5 |
 |-------|--------|
 | Series: | [LAMPSecurity](https://www.vulnhub.com/series/lampsecurity,43/) |
-| Link: | https://www.vulnhub.com/entry/lampsecurity-ctf5,84/ |
+| Link: | [LAMPSecurity: CTF5]https://www.vulnhub.com/entry/lampsecurity-ctf5,84/ |
 | OS: | Linux - Fedora release 8 (Werewolf) |
-| Creator: | https://www.vulnhub.com/author/madirish2600,75/ |
+| Creator: | [madirish2600](https://www.vulnhub.com/author/madirish2600,75/) |
 
 ## Topics: ##
 - Hash Cracking
