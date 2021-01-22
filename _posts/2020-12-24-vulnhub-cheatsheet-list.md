@@ -14,7 +14,7 @@ I will be coming back and ticking off these machines once I solved them, and wri
 2.	[LAMPSecurity: CTF 5 - Completed](https://ctrllevi.github.io/vulnhub/lampsecurity/2020/12/27/vulnhub-ctf5.html)
 3.	[LAMPSecurity: CTF 7 - Completed](https://ctrllevi.github.io/2020/12/31/vulnhub-ctf7.html)
 4.	[Holynix: v1 - Completed](https://ctrllevi.github.io/vulnhub/holynix/2021/01/03/vulnhub-holynix.html)
-5.	[pWnOS -1.0](https://www.hackingarticles.in/hack-the-pwnos-1-0-boot-to-root/)
+5.	[pWnOS -1.0 - Completed](https://ctrllevi.github.io/vulnhub/pwnos1/2021/01/21/vulnhub-pwnos1.html)
 6.	[pWnOS -2.0](https://www.hackingarticles.in/hack-the-pwnos-2-0-boot-2-root-challenge/)
 7.	[DE-ICE:S1.120](https://www.hackingarticles.in/hack-the-de-ice-s1-120-vm-boot-to-root/)
 8.	[Hackademic-RTB1](https://www.hackingarticles.in/hack-the-hackademic-rtb1-vm-boot-to-root/)
