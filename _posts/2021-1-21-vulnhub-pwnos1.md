@@ -3,7 +3,7 @@ layout: post
 title:  "pWnOS: 1.0"
 date:   2021-1-21  +0400
 categories: vulnhub pwnos1
-description: "This is the first machine of the pWnOS series. This machine is ranked as easy, but took loads of effort to pwn. Hope you enjoy it!"
+description: "It's a linux virtual machine intentionally configured with exploitable services to provide you with a path to r00t. This is also the first machine of the pWnOS series. This machine is ranked as easy, but took loads of effort to pwn. Hope you enjoy it!"
 ---
 
 <span style="text-decoration: underline">Box Stats:</span>
