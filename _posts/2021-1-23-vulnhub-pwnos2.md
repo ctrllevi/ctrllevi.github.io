@@ -140,7 +140,7 @@ dirsearch:
 
 After I conducted my scans, I proceeded to the website itself. The first thing that caught my attention was the register link. I quickly registered using `test@test.com : test`. From here, I tried logging in with those credentials. Once logged in, you are greeted with a static "Logging you in..." page:
 
-![Static Login page]()
+![Static Login page](https://github.com/ctrllevi/ctrllevi.github.io/blob/main/_posts/images/pwnos2/login.png?raw=true)
 
 As this was a dead end, I continued enumerating the `Login` link. I usually enter `'` into the input fields to check for SQL errors, and fortunately, this gave me this error:
 ```
